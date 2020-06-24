@@ -92,8 +92,10 @@ example head.js was written as head.j_
 ```
 - There was no .gitignore file to prevent commiting unwanted files and folders to the a repository.
 - Also, putting the haveibeenpwned.com api URL in an env file would have been a better option
-```
+
 ## Project directory
+```
+
 .
 ├── README.md
 ├── components
