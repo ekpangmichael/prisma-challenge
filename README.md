@@ -10,6 +10,7 @@ Below are the instructions on how to run the scripts.
 
 The Terraform script creates an s3 bucket for hosting static websites, it also provisions  CloudFront and uploads the website content to the s3 bucket after creation.
 
+
 ### Prerequisite
 > The project uses Terraform v0.12.26
 - Install [Terraform 0.12.x](https://www.terraform.io/downloads.html) if you don't already have it
@@ -24,7 +25,15 @@ Alternatively, you can  configure your AWS credentials using the AWS CLI. To do 
 ```
 aws configure
 ```
+The default region is eu-west-2. If you want to change the region you can update the deployment/terraform/variables.tf file
+```
+variable "region" {
+  description = "Name of region"
+  type        = string
+   default = "eu-west-2"
+}
 
+```
 - cd into the project directory and run  the *deploy_with_terraform.sh* script
 ```
 bash deploy_with_terraform.sh
